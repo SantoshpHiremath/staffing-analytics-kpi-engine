@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          # jsdom 30 pulls in undici ^8.9.0, which calls a WebIDL global
+          # (markAsUncloneable) that isn't present on Node 20's runtime --
+          # every test worker failed to even start under Node 20 with
+          # "TypeError: webidl.util.markAsUncloneable is not a function",
+          # 0 tests run. Node 22 LTS provides that API and is jsdom 30's
+          # actually-supported runtime.
+          node-version: "22"
+      - run: npm install
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run demo
