@@ -2,10 +2,9 @@
  * access.ts
  * ---------
  * Enforces that a query is scoped to the data a caller is allowed to see,
- * independent of whatever dimension filter they pass in. This is the
- * "every query is scoped to the data a user is allowed to see" concern
- * named directly in the posting — modeled here as a dedicated,
- * unit-testable module rather than an inline check easy to forget in one
+ * independent of whatever dimension filter they pass in. This covers the
+ * "every query is scoped to the data a user is allowed to see" concern,
+ * modeled here as a dedicated, unit-testable module rather than an inline check easy to forget in one
  * projector and not another.
  */
 

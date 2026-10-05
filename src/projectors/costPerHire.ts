@@ -15,8 +15,8 @@
  * A requisition with a null agencyFeeEur (not yet actually filled, or a
  * data gap) is excluded from both the numerator and the denominator,
  * not silently treated as a zero-cost hire — treating a missing fee as
- * 0 would understate cost-per-hire, exactly the kind of "get the
- * numbers right" bug the posting calls out.
+ * 0 would understate cost-per-hire, a bug that would quietly
+ * distort the KPI.
  */
 
 import type { StaffingDataset, DimensionFilter, AccessScope, KpiResult } from "./../types";

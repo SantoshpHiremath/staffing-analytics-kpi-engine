@@ -75,10 +75,9 @@ export function generateDataset(
 
     // Outcome distribution: 70% filled, 15% cancelled, 15% still open.
     // Cancellation/open likelihood is intentionally NOT correlated with
-    // any feature here (unlike the predictive-modeling projects in this
-    // portfolio) — this project's honest scope is correct aggregation
+    // any feature here (this project's scope is correct aggregation
     // and access-scoping, not predictive signal, so a directionless
-    // synthetic outcome is the right (not a shortcut) choice here.
+    // synthetic outcome is the right choice here).
     const outcomeRoll = rng();
     let status: Requisition["status"];
     let filledAt: string | null = null;

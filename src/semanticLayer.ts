@@ -3,8 +3,8 @@
  * ----------------
  * The single entry point a UI (or API layer) calls to get any named KPI,
  * sliced by any supported dimension, scoped to what the caller is
- * allowed to see. This is the "semantic layer" referenced in the
- * posting: metric *names* are registered once here, and callers ask for
+ * allowed to see. This is the semantic layer:
+ * metric *names* are registered once here, and callers ask for
  * a metric by name rather than knowing how each one is computed.
  */
 

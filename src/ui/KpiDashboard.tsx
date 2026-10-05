@@ -2,8 +2,7 @@
  * KpiDashboard.tsx
  * ----------------
  * A minimal, real React + TypeScript component consuming the semantic
- * layer directly — the "surface it in our React UI" step the posting
- * names. Deliberately small and unstyled (no design system to fake):
+ * layer directly, surfacing the KPIs in a React UI. Deliberately small and unstyled (no design system to fake):
  * the point is a genuinely typed, tested data flow from raw dataset to
  * rendered KPI cards, not a polished mockup.
  */
